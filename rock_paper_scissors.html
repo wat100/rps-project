@@ -1,30 +1,7 @@
-<!DOCTYPE html> 
-<head>
-   <meta charset="utf-8">
-   <title></title>
-   <meta name="author" content="">
-   <meta name="description" content="">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-   <link href="css/normalize.css" rel="stylesheet">
-   <link href="css/style.css" rel="stylesheet">
- </head>
- 
- <body>
- 
-<button>Rock</button>
-<button>Paper</button>
-<button>Scissors</button>
-
-
-
-
-
-
+<!DOCTYPE html>
+<html>
 
 <script>
-'use strict';
-
 
 function computerPlay(arr) {
    var arr = ["Rock", "Paper", "Scissors"];
@@ -32,9 +9,16 @@ function computerPlay(arr) {
    return arr[Math.floor(Math.random() * arr.length)];
 }
 
+let computerSelection = computerPlay();
 
-function playRound(playerSelection, computerSelection) {
-	if (playerSelection == "rock"){
+let playerSelection = prompt("Type Rock or Paper or Scissors");
+
+console.log("You:" + playerSelection);
+
+console.log("Computer:" + computerSelection)
+
+function game(){
+    if (playerSelection == "rock"){
       if (computerSelection == "Rock"){
          return "It's a draw!";
       } else if (computerSelection == "Paper"){
@@ -56,14 +40,8 @@ function playRound(playerSelection, computerSelection) {
       } else return "You lost! Scissors beats Paper!"
    }
 }
-const playerSelection = prompt("Type Rock, Paper or Scissors to play!")
-const computerSelection = computerPlay();
-const x = playRound(playerSelection, computerSelection);
+
 console.log(game());
 
-
-
-
 </script>
- </body>
 </html>
