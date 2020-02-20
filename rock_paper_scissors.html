@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <script>
 
 function computerPlay(arr) {
@@ -11,7 +12,9 @@ function computerPlay(arr) {
 
 let computerSelection = computerPlay();
 
-let playerSelection = prompt("Type Rock or Paper or Scissors");
+let answer = prompt("Type Rock or Paper or Scissors to play!")
+
+let playerSelection = answer.toLowerCase();
 
 console.log("You:" + playerSelection);
 
